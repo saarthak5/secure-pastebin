@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SecureBin - Create Paste</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Create a Secure Paste</h2>
+    <form method="POST">
+        <textarea name="content" rows="10" cols="50" placeholder="Enter your text here..." required></textarea><br><br>
+        <label>Expiry:</label>
+        <select name="expiry">
+            <option value="10min">10 Minutes</option>
+            <option value="1hour">1 Hour</option>
+            <option value="1day">1 Day</option>
+            <option value="never">Never</option>
+        </select><br><br>
+        <input type="password" name="password" placeholder="Optional password for encryption"><br><br>
+        <button type="submit">Create Paste</button>
+    </form>
+</body>
+</html>

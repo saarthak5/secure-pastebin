@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Paste</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% if requires_password %}
+        <h2>This paste is encrypted</h2>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <p style="color: red;">{{ messages[0] }}</p>
+            {% endif %}
+        {% endwith %}
+        <form method="POST">
+            <input type="password" name="password" placeholder="Enter password" required>
+            <button type="submit">Decrypt</button>
+        </form>
+    {% else %}
+        <h2>Paste Content</h2>
+        <pre>{{ paste }}</pre>
+    {% endif %}
+</body>
+</html>
