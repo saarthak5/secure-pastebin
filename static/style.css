@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    padding: 2rem;
+    color: #333;
+    max-width: 700px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+textarea, select, input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a252f;
+}
+
+pre {
+    background: #fff;
+    padding: 12px;
+    border: 1px solid #ccc;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 5px;
+}
+
+form {
+    margin-top: 20px;
+}
